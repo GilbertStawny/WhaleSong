@@ -7,9 +7,6 @@ RUN yum install -y tcpdump traceroute telnet unicornscan bind-utils iperf3 net-t
 #Installs ctop
 RUN wget https://github.com/bcicen/ctop/releases/download/v0.7.1/ctop-0.7.1-linux-amd64 -O /usr/local/bin/ctop && chmod +x /usr/local/bin/ctop
 
-# Adds ctop license file
-ADD ctop-0.7.1 /usr/share/doc/ctop-0.7.1/LICENSE
-
 #personalization of bash shell
 ADD motd /root/motd
 ADD profile  /etc/profile
