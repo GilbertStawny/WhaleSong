@@ -1,5 +1,5 @@
 FROM amazonlinux:latest
-MAINTAINER "Stawny" <stawny@amazon.com>
+MAINTAINER "GilbertStawny" <gilbert.stawny@lacework.net>
 
 RUN yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm && yum update -y && yum upgrade -y
 RUN yum install -y tcpdump traceroute telnet unicornscan bind-utils iperf3 net-tools dhcping ethtool mtr openssl iftop wget openssh-server
