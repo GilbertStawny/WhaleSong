@@ -1,2 +1,0 @@
-#!/bin/bash
-docker login -u AWS -p $(aws ecr-public get-login-password --region us-east-1) $1
