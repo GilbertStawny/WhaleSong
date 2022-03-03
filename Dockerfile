@@ -2,7 +2,7 @@ FROM amazonlinux:latest
 MAINTAINER "GilbertStawny" <gilbert.stawny@lacework.net>
 
 RUN yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm && yum update -y && yum upgrade -y
-RUN yum install -y tcpdump traceroute telnet unicornscan bind-utils iperf3 net-tools dhcping ethtool mtr openssl iftop wget openssh-server iproute nmap
+RUN yum install -y tcpdump traceroute telnet unicornscan bind-utils iperf3 net-tools dhcping ethtool mtr openssl iftop wget openssh-server iproute nmap scp java
 
 #Installs ctop
 RUN wget https://github.com/bcicen/ctop/releases/download/v0.7.1/ctop-0.7.1-linux-amd64 -O /usr/local/bin/ctop && chmod +x /usr/local/bin/ctop
