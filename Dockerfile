@@ -10,7 +10,7 @@ RUN wget https://github.com/bcicen/ctop/releases/download/v0.7.1/ctop-0.7.1-linu
 #personalization of bash shell
 ADD motd /root/motd
 ADD profile  /etc/profile
-
+ADD entrypoint.sh /root/entrypoint.sh
 # Configure SSH daemon
 ADD sshd_config /etc/ssh/sshd_config
 ADD ssh_host_rsa_key /etc/ssh/ssh_host_rsa_key
