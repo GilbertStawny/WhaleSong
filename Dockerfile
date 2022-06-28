@@ -1,3 +1,4 @@
+#base image
 FROM amazonlinux:latest
 MAINTAINER "GilbertStawny" <gilbert.stawny@lacework.net>
 
