@@ -17,7 +17,7 @@ jobs:
     - uses: actions/checkout@v3
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag whalesong:latest
-    - uses: lacework/lw-scanner-action@v1.0.0
+    - uses: lacework/lw-scanner-action@v0.6.0
       name: Scan container images for vulnerabitilies
       with:
         LW_ACCOUNT_NAME: ${{ secrets.LW_ACCOUNT_NAME }} 
