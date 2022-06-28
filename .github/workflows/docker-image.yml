@@ -14,14 +14,14 @@ jobs:
     environment: laceworkscanner
     
     steps:
-    - uses: actions/checkout@v3
-    - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag whalesong:latest
     - shell: bash
     env:
       SUPER_SECRET: ${{ secrets.LW_ACCESS_TOKEN }}
     run: |
       echo "$SUPER_SECRET"
+    - uses: actions/checkout@v3
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag whalesong:latest
     - uses: lacework/lw-scanner-action@v1.0.0
       name: Scan container images for vulnerabitilies using Lacework
       with:
