@@ -11,8 +11,19 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-
+    environment: secrets
+    
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag whalesong:$(date +%s)
+    - uses: lacework/lw-scanner-action@v1.0.0
+      name: Scan container images for vulnerabitilies using Lacework
+      with:
+        LW_ACCOUNT_NAME: ${{ secrets.LW_ACCOUNT_NAME }} 
+        LW_ACCESS_TOKEN: ${{ secrets.LW_ACCESS_TOKEN }}
+        IMAGE_NAME: techallylw/vulnerable-container
+        IMAGE_TAG: v0.0.1
+        SAVE_RESULTS_IN_LACEWORK: true
+        SAVE_BUILD_REPORT: true
+        BUILD_REPORT_FILE_NAME: myreport.htm
