@@ -14,11 +14,6 @@ jobs:
     environment: laceworkscanner
     
     steps:
-    - shell: bash
-    env:
-      SUPER_SECRET: ${{ secrets.LW_ACCESS_TOKEN }}
-    run: |
-      echo "$SUPER_SECRET"
     - uses: actions/checkout@v3
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag whalesong:latest
