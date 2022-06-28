@@ -17,23 +17,18 @@ jobs:
     - uses: actions/checkout@v3
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag whalesong:latest
-      
     - shell: bash
     env:
-      ACCESS_TOKEN: ${{ secrets.LW_ACCESS_TOKEN }}
+      SUPER_SECRET: ${{ secrets.LW_ACCESS_TOKEN }}
     run: |
-      echo "$ACCESS_TOKEN"
-      
+      echo "$SUPER_SECRET"
     - uses: lacework/lw-scanner-action@v1.0.0
-      env:
-        ACCOUNT_NAME: ${{ secrets.LW_ACCOUNT_NAME }}
-        ACCESS_TOKEN: ${{ secrets.LW_ACCESS_TOKEN }}
       name: Scan container images for vulnerabitilies using Lacework
       with:
-        LW_ACCOUNT_NAME: $ACCOUNT_NAME 
-        LW_ACCESS_TOKEN: $ACCESS_TOKEN
+        LW_ACCOUNT_NAME: ${{ secrets.LW_ACCOUNT_NAME }} 
+        LW_ACCESS_TOKEN: ${{ secrets.LW_ACCESS_TOKEN }}
         IMAGE_NAME: whalesong
         IMAGE_TAG: latest
         SAVE_RESULTS_IN_LACEWORK: true
         SAVE_BUILD_REPORT: true
-        BUILD_REPORT_FILE_NAME: myreport.htm
+        BUILD_REPORT_FILE_NAME: scanreport.htm
