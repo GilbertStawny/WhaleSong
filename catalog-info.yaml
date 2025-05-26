@@ -9,7 +9,7 @@ metadata:
   annotations:
     github.com/project-slug: GilbertStawny/WhaleSong
     wiz.io/project-id: 8cb335db-df7b-50b8-87d0-bb910f9e682e
-    wiz.io/external-asset-id: github.com##GilbertStawny/WhaleSong
+    wiz.io/external-asset-id: GilbertStawny/WhaleSong
 spec:
   type: service
   lifecycle: experimental
