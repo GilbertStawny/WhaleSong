@@ -2,11 +2,15 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: WhaleSong
+  links:
+    - url: https://app.wiz.io/explorer/graph#%7E%28entity%7E%28%7E%278cb335db-df7b-50b8-87d0-bb910f9e682e*2cREPOSITORY%29%29
+      title: Wiz Dashboard
+      icon: dashboard
   annotations:
     github.com/project-slug: GilbertStawny/WhaleSong
     wiz/project-id: "d8c7868d-9cf3-589a-b2a9-7708bd280d0e"
-    wiz/external-asset-id: "github.com##GilbertStawny/WhaleSong"
+    wiz.io/repository-external-id: "github.com##GilbertStawny/WhaleSong"
 spec:
-  type: other
-  lifecycle: unknown
+  type: service
+  lifecycle: experimental
   owner: guests
