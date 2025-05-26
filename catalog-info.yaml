@@ -4,9 +4,9 @@ metadata:
   name: WhaleSong
   annotations:
     github.com/project-slug: GilbertStawny/WhaleSong
-    wiz/project-id: 1b4d5fa9-452a-561d-a3f7-03b521113b99
-    wiz/external-asset-id: github.com##GilbertStawny/WhaleSong
+    wiz/project-id: "1b4d5fa9-452a-561d-a3f7-03b521113b99"
+    wiz/external-asset-id: "github.com##GilbertStawny/WhaleSong"
 spec:
   type: other
-  lifecycle: unknown
+  lifecycle: experimental
   owner: guests
