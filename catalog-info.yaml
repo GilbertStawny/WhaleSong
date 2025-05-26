@@ -8,7 +8,8 @@ metadata:
       icon: dashboard
   annotations:
     github.com/project-slug: GilbertStawny/WhaleSong
-    wiz.io/asset-id: "8cb335db-df7b-50b8-87d0-bb910f9e682e"
+    wiz.io/project-id: 8cb335db-df7b-50b8-87d0-bb910f9e682e
+    wiz/external-asset-id: github.com##GilbertStawny/WhaleSong
 spec:
   type: service
   lifecycle: experimental
